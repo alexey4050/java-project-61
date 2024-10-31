@@ -18,7 +18,7 @@
 
 *Greeting* - это простая игра, в которой игроку предлагают ввести свое имя. Это позволяет сделать игру более персонализированной.
 
-[greeting](asciinema play asciinema/O41sMknRbYBpl8Np0Z5M2Sxjx.cast)
+[![ asciicast](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx.svg)](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx)
 ___ 
 
 ### ...evenGame
