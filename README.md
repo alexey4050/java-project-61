@@ -28,3 +28,10 @@ ___
 *Even Game* - это игра, в которой игроку показывают случайное число. Он должен определить, четное оно или нет, и дать ответ "yes" или "no". Правильные ответы засчитываются, неправильные - нет. Игрок должен дать 3 правильных ответа подряд, чтобы победить.
 
 [![asciicast](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu.svg)](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu)
+
+### ...calculator
+*Calculator* - is a game presents a simple mathematical expressions and asks the user to calculate its result.
+
+*Калькулятор* - это игра представляет собой простое математическое выражение и просит пользователя вычислить его результат.
+
+[![asciicast](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm.svg)](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm)
