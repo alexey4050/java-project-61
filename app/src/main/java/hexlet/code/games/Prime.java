@@ -12,7 +12,7 @@ public class Prime implements Game {
     }
 
     public String generateQuestion() {
-        number = RANDOM.nextInt(100);
+        number = RANDOM.nextInt(100) + 1;
         return String.valueOf(number);
     }
 
