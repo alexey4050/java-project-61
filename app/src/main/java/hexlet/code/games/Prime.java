@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class Prime implements Game {
     public static final Random RANDOM = new Random();
-    public static final String DESCRIPTON = "Answer 'yes' if given number is prime. Otherwwise answer 'no'";
+    public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwwise answer 'no'";
     private int number;
 
     public String getDescription() {
-        return DESCRIPTON;
+        return DESCRIPTION;
     }
 
     public String generateQuestion() {
-        number = RANDOM.nextInt(100) + 1;
+        number = RANDOM.nextInt(100);
         return String.valueOf(number);
     }
 
