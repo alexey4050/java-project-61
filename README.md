@@ -46,7 +46,7 @@ ___
 
 ---
 
-### ..GCD (НОД - наибольший общий делитель)
+### ...GCD (НОД - наибольший общий делитель)
 *GCD* - is a game where player must common divisor (GCD) of two random numbers presented to them.
 
 *НОД* - это игра где нужно найти наибольший общий делитель (НОД) двух случайных чисел, которые ему предоставляются.
@@ -60,4 +60,19 @@ ___
 [![asciicast](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto.svg)](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto)
 
 --- 
-### arithmetic progression
+### ...arithmetic progression
+*Arithmetic Progression Game* - is a game where player must determine the missing in an arithmetic progression.
+
+*Игра арифметичесекая прогрессия* - игра, где пользователь должен определить пропущенное число в арифметической прогрессии.
+
+#### Правила игры.
+* В игре Вам будет показана последовательность чисел, образующих арифметическую прогрессию.
+* Одно из чисел будет заменено на две точки "..".
+* Вам необходимо ввести пропущенное число в прогрессии.
+* Если Вы дадите правильный ответ, вы продолжаете игру.
+* Если не правильный, Вы получаете подсказку с правильным ответом, и игра заканчивается.
+
+[![asciicast](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C.svg)](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C)
+
+---
+
