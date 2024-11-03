@@ -59,3 +59,5 @@ ___
 
 [![asciicast](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto.svg)](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto)
 
+--- 
+### arithmetic progression
