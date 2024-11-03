@@ -6,14 +6,16 @@ public class Calc implements Game {
     private static final Random RANDOM = new Random();
     private static final String DESCRIPTION = "What is the result of the expression?";
     private String currentQuestion;
+    private int numberOne;
+    private int numberTwo;
 
     public String getDescription() {
         return DESCRIPTION;
     }
 
     public String generateQuestion() {
-        int numberOne = RANDOM.nextInt(100);
-        int numberTwo = RANDOM.nextInt(100);
+        numberOne = RANDOM.nextInt(100);
+        numberTwo = RANDOM.nextInt(100);
         String[] operations = {"+", "-", "*"};
         String operation = operations[RANDOM.nextInt(operations.length)];
         currentQuestion = String.format("%d %s %d", numberOne, operation, numberTwo);
@@ -22,8 +24,8 @@ public class Calc implements Game {
 
     public String getCorrectAnswer()  {
         String[] parts = currentQuestion.split(" ");
-        int numberOne = Integer.parseInt(parts[0]);
-        int numberTwo = Integer.parseInt(parts[2]);
+        numberOne = Integer.parseInt(parts[0]);
+        numberTwo = Integer.parseInt(parts[2]);
         String operation = parts[1];
         switch (operation) {
             case "+":

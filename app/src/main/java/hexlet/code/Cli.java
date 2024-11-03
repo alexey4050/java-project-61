@@ -15,7 +15,7 @@ public class Cli {
     public static String getUserName() {
         System.out.println("May I have your name?");
         return SCANNER.nextLine();
-        }
+    }
 
     public static String getUserAnswer() {
         System.out.println("Your answer: ");
