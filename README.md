@@ -60,7 +60,7 @@ ___
 [![asciicast](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto.svg)](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto)
 
 --- 
-### ...arithmetic progression
+### ...arithmetic progression (игра арифметическая прогрессия)
 *Arithmetic Progression Game* - is a game where player must determine the missing in an arithmetic progression.
 
 *Игра арифметичесекая прогрессия* - игра, где пользователь должен определить пропущенное число в арифметической прогрессии.
