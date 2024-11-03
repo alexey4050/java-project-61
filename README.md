@@ -4,24 +4,30 @@
 
 ---
 ## Mind games. 
+#### Как играть
+1. Запустите игру.
+2. Выберите игру, которая соответствует номеру.
+3. Введите свое имя.
+4. Выполните поставленные условия в соответствии с требованиями в игре.
+5. Продолжайте играть, пока не дадите три правильных ответа.
 
-*Mind games* - is a colliction of games designed to train your logic, attention and memory. The project aims to make learning engaging and accessible for everyone.
+*Mind games* - is a collection of games designed to train your logic, attention and memory. The project aims to make learning engaging and accessible for everyone.
 
 *Игры разума* - это набор игр, предназначенный для тренировки логики, внимания и памяти. Проект создан для того, чтобы сделать обучение увлекательным и доступным для всех.
 
 ---
 
-### ...greeting
+### ...greeting (приветствие)
 
 
 *Greeting* - is a simple game that asks the player to enter the name. This personalizes the game experience.
 
-*Greeting* - это простая игра, в которой игроку предлагают ввести свое имя. Это позволяет сделать игру более персонализированной.
+*Приветствие* - это простая игра, в которой игроку предлагают ввести свое имя. Это позволяет сделать игру более персонализированной.
 
 [![ asciicast](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx.svg)](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx)
 ___ 
 
-### ...evenGame
+### ...evenGame (игра на чётность)
 
 *Even Game* - is a game where the player is presented with a random number. They must determine if the number is even or odd and answer "yes" or "no". Correct answers are counted, incorrect answers are not. The player must give 3 correct answers in a row to win.
 
@@ -29,9 +35,27 @@ ___
 
 [![asciicast](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu.svg)](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu)
 
-### ...calculator
+---
+
+### ...calculator (калькулятор)
 *Calculator* - is a game presents a simple mathematical expressions and asks the user to calculate its result.
 
 *Калькулятор* - это игра представляет собой простое математическое выражение и просит пользователя вычислить его результат.
 
 [![asciicast](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm.svg)](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm)
+
+---
+
+### ..GCD (НОД - наибольший общий делитель)
+*GCD* - is a game where player must common divisor (GCD) of two random numbers presented to them.
+
+*НОД* - это игра где нужно найти наибольший общий делитель (НОД) двух случайных чисел, которые ему предоставляются.
+
+ #### Правилв игры.
+* В игре Вам будут показаны два случайных числа.
+* Вам необходимо ввести наибольший общий делитель этих чисел.
+* Если Вы дадите правильный ответ, Вы продолжите игру.
+* Если же неправильный, Вы получите подсказку  правильным ответом и игра закончиться.
+
+[![asciicast](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto.svg)](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto)
+
