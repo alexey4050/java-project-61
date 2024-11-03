@@ -75,4 +75,18 @@ ___
 [![asciicast](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C.svg)](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C)
 
 ---
+#### ...prime number game (игра простое число)
 
+*Prime number game* - is an engaging game where players must determine whether a given number is prime. A prime number is a naturel number greater than 1 that has no divisor other than 1 and itself.
+
+*Простое число* - это увлекательная игра, в которой игроки должны определять, является ли заданное число больше 1, которое не имеет делителей, кроме 1 и самого себя.
+
+#### Правила игры
+* Игроку нужно определить, является ли это число простым или составным.
+* Если игрок считает число простым, он отвечает "yes". Если нет — отвечает "no".
+* Если Вы дадите правильный ответ, вы продолжаете игру.
+* Если не правильный, Вы получаете подсказку с правильным ответом, и игра заканчивается
+
+[![asciicast](https://asciinema.org/a/qmSeAmgHSGJdlPL0RwrmR17Fo.svg)](https://asciinema.org/a/qmSeAmgHSGJdlPL0RwrmR17Fo)
+
+---
