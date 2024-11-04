@@ -6,6 +6,10 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
+import java.util.Scanner;
+
+import static java.lang.Integer.parseInt;
+
 public class App {
     public static void main(String[] args) {
 
@@ -24,7 +28,8 @@ public class App {
             while (!validInput) {
                 System.out.print("Your choice: ");
                 try {
-                    choice = Integer.parseInt(Cli.SCANNER.nextLine());
+                    choice = Cli.SCANNER.nextInt();
+                    Cli.SCANNER.nextLine();
                     validInput = true;
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid input. Please enter a valid number.");

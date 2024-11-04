@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Prime implements Game {
     public static final Random RANDOM = new Random();
-    public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
+    public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private int number;
 
     public String getDescription() {

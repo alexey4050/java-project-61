@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Progression implements Game {
     private static final Random RANDOM = new Random();
-    private static final String DESCRIPTION = "What number is missing in the progresion?.";
+    private static final String DESCRIPTION = "What number is missing in the progression?";
     private int progressionLength;
     private int startValue;
     private int step;

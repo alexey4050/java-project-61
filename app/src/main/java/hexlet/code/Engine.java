@@ -22,8 +22,8 @@ public class Engine {
                 rounds++;
             } else {
                 String correctAnswer = game.getCorrectAnswer();
-                System.out.println("'" + userAnswer + "' is wrong " + "answer ;(. ");
-                System.out.print("Correct answer was '" + correctAnswer + "'. ");
+                System.out.print("'" + userAnswer + "' is wrong " + "answer ;(. ");
+                System.out.println("Correct answer was '" + correctAnswer + "'. ");
                 System.out.println("Let;s try again, " + userName + "!");
                 break;
             }
