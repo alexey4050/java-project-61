@@ -5,7 +5,7 @@ import java.util.Random;
 public class GCD implements Game {
 
     private static final Random RANDOM = new Random();
-    private static final String DESCRIPTION = "Find the greatest common divisor of given number.";
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
     private int numberOne;
     private int numberTwo;
 
