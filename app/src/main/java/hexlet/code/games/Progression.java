@@ -4,7 +4,10 @@ import java.util.Random;
 
 public class Progression implements Game {
     private static final Random RANDOM = new Random();
-    private static final String DESCRIPTION = "What number is missing in the progression?";
+    private static final int MIN_LENGTH = 5;
+    private static final int MAX_LENGTH = 6;
+    private static final int MAX_START_VALUE = 100;
+    private static final int MAX_STEP = 10;
     private int progressionLength;
     private int startValue;
     private int step;
@@ -12,13 +15,13 @@ public class Progression implements Game {
     private  int correctAnswer;
 
     public String getDescription() {
-        return DESCRIPTION;
+        return "What number is missing in the progression?";
     }
 
     public String generateQuestion() {
-        progressionLength = RANDOM.nextInt(6) + 5;
-        startValue = RANDOM.nextInt(100);
-        step = RANDOM.nextInt(10) + 1;
+        progressionLength = RANDOM.nextInt(MAX_LENGTH) + MIN_LENGTH;
+        startValue = RANDOM.nextInt(MAX_START_VALUE) + 1;
+        step = RANDOM.nextInt(MAX_STEP) + 1;
         hiddenIndex = RANDOM.nextInt(progressionLength);
 
         String question = "";

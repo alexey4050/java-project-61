@@ -5,17 +5,17 @@ import java.util.Random;
 public class GCD implements Game {
 
     private static final Random RANDOM = new Random();
-    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
+    private static final int MAX_GCD_NUMBER = 100;
     private int numberOne;
     private int numberTwo;
 
     public String getDescription() {
-        return DESCRIPTION;
+        return "Find the greatest common divisor of given numbers.";
     }
 
     public String generateQuestion() {
-        numberOne = RANDOM.nextInt(100);
-        numberTwo = RANDOM.nextInt(100);
+        numberOne = RANDOM.nextInt(MAX_GCD_NUMBER);
+        numberTwo = RANDOM.nextInt(MAX_GCD_NUMBER);
         return String.format("%d %d", numberOne, numberTwo);
     }
 
@@ -33,5 +33,4 @@ public class GCD implements Game {
         }
         return gcd(numTwo, numOne % numTwo);
     }
-
 }

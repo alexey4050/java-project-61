@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class Even implements Game {
     private static final Random RANDOM = new Random();
-    private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int MAX_NUMBER = 100;
     private int number;
 
     public String getDescription() {
-        return DESCRIPTION;
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     public String generateQuestion() {
-        number = RANDOM.nextInt(100);
+        number = RANDOM.nextInt(MAX_NUMBER);
         return String.valueOf(number);
     }
 
