@@ -18,9 +18,18 @@ public class App {
             System.out.println("5 - Progression");
             System.out.println("6 - Prime");
             System.out.println("0 - Exit");
-            System.out.print("Your choice: ");
-            int choice = Integer.parseInt(Cli.SCANNER.nextLine());
 
+            boolean validInput = false;
+            int choice = 0;
+            while (!validInput) {
+                System.out.print("Your choice: ");
+                try {
+                    choice = Integer.parseInt(Cli.SCANNER.nextLine());
+                    validInput = true;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                }
+            }
             switch (choice) {
                 case 1:
                     Cli.greet();
