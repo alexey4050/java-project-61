@@ -6,10 +6,6 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-import java.util.Scanner;
-
-import static java.lang.Integer.parseInt;
-
 public class App {
     public static void main(String[] args) {
 
