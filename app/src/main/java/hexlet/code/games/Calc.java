@@ -1,16 +1,18 @@
 package hexlet.code.games;
 
-public class Calc implements Game {
+public final class Calc implements Game {
     private static final int MAX_VALUE = 100;
     private static final int MIN_VALUE = -100;
     private String currentQuestion;
     private int numberOne;
     private int numberTwo;
 
+    @Override
     public String getDescription() {
         return "What is the result of the expression?";
     }
 
+    @Override
     public String generateQuestion() {
         numberOne = getRandomNumber(MIN_VALUE, MAX_VALUE);
         numberTwo = getRandomNumber(MIN_VALUE, MAX_VALUE);
@@ -19,7 +21,7 @@ public class Calc implements Game {
         currentQuestion = String.format("%d %s %d", numberOne, operation, numberTwo);
         return currentQuestion;
     }
-
+    @Override
     public String getCorrectAnswer() {
         switch (currentQuestion.split(" ")[1]) {
             case "+":
@@ -33,6 +35,7 @@ public class Calc implements Game {
         }
     }
 
+    @Override
     public boolean isCorrectAnswer(String userAnswer) {
         return userAnswer.equalsIgnoreCase(getCorrectAnswer());
     }

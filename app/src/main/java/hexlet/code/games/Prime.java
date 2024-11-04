@@ -2,20 +2,23 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Prime implements Game {
+public final class Prime implements Game {
     public static final Random RANDOM = new Random();
     private static final int MAX_NUMBER = 100;
     private int number;
 
+    @Override
     public String getDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
+    @Override
     public String generateQuestion() {
         number = RANDOM.nextInt(MAX_NUMBER);
         return String.valueOf(number);
     }
 
+    @Override
     public String getCorrectAnswer() {
         return isPrime(number) ? "yes" : "no";
     }
@@ -32,6 +35,7 @@ public class Prime implements Game {
         return true;
     }
 
+    @Override
     public boolean isCorrectAnswer(String userAnswer) {
         return userAnswer.equalsIgnoreCase(getCorrectAnswer());
     }
