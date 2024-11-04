@@ -2,36 +2,30 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public final class GCD implements Game {
+public final class GCD {
 
     private static final Random RANDOM = new Random();
     private static final int MAX_GCD_NUMBER = 100;
-    private int numberOne;
-    private int numberTwo;
 
-    @Override
-    public String getDescription() {
+    public static String getDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
 
-    @Override
-    public String generateQuestion() {
+    public static String generateQuestion(int numberOne, int numberTwo) {
         numberOne = RANDOM.nextInt(MAX_GCD_NUMBER);
         numberTwo = RANDOM.nextInt(MAX_GCD_NUMBER);
         return String.format("%d %d", numberOne, numberTwo);
     }
 
-    @Override
-    public String getCorrectAnswer() {
+    public static String getCorrectAnswer(int numberOne, int numberTwo) {
         return String.valueOf(gcd(numberOne, numberTwo));
     }
 
-    @Override
-    public boolean isCorrectAnswer(String userAnswer) {
-        return userAnswer.equalsIgnoreCase(getCorrectAnswer());
+    public static boolean isCorrectAnswer(String userAnswer, int numberOne, int numberTwo) {
+        return userAnswer.equalsIgnoreCase(getCorrectAnswer(numberOne, numberTwo));
     }
 
-    private int gcd(int numOne, int numTwo) {
+    public static int gcd(int numOne, int numTwo) {
         if (numTwo == 0) {
             return numOne;
         }

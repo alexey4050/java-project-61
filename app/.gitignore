@@ -3,6 +3,15 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+.idea
+app/evengame.cast
+app/calculator.cast
+app/evengame.cast
+app/progression.cast
+app/prime.cast
+app/demo.cast
+app/gcd.cast
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml

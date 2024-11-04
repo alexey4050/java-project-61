@@ -1,11 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
-
 public class App {
     private static final int GREET_GAME = 1;
     private static final int EVEN_GAME = 2;
@@ -29,30 +23,35 @@ public class App {
         int choice = Cli.SCANNER.nextInt();
         Cli.SCANNER.nextLine();
 
+        String gameName = "";
         switch (choice) {
             case GREET_GAME:
                 Cli.greet();
                 break;
             case EVEN_GAME:
-                Engine.run(new Even());
+                gameName = "Even";
                 break;
             case CALC_GAME:
-                Engine.run(new Calc());
+                gameName = "Calc";
                 break;
             case GCD_GAME:
-                Engine.run(new GCD());
+                gameName = "GCD";
                 break;
             case PROGRESSION_GAME:
-                Engine.run(new Progression());
+                gameName = "Progression";
                 break;
             case PRIME_GAME:
-                Engine.run(new Prime());
+                gameName = "Prime";
                 break;
             case EXIT:
                 System.out.println("Goodbye!");
-                return;
+                break;
             default:
                 System.out.println("Invalid choice. Please try again. " + choice);
+                return;
+        }
+        if (!gameName.isEmpty()) {
+            Engine.run(gameName);
         }
     }
 }

@@ -2,31 +2,25 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public final class Progression implements Game {
+public final class Progression {
     private static final Random RANDOM = new Random();
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 6;
     private static final int MAX_START_VALUE = 100;
     private static final int MAX_STEP = 10;
-    private int progressionLength;
-    private int startValue;
-    private int step;
-    private int hiddenIndex;
-    private  int correctAnswer;
 
-    @Override
-    public String getDescription() {
+    public static String getDescription() {
         return "What number is missing in the progression?";
     }
 
-    @Override
-    public String generateQuestion() {
-        progressionLength = RANDOM.nextInt(MAX_LENGTH) + MIN_LENGTH;
-        startValue = RANDOM.nextInt(MAX_START_VALUE) + 1;
-        step = RANDOM.nextInt(MAX_STEP) + 1;
-        hiddenIndex = RANDOM.nextInt(progressionLength);
+    public static String generateQuestion() {
+        int progressionLength = RANDOM.nextInt(MAX_LENGTH) + MIN_LENGTH;
+        int startValue = RANDOM.nextInt(MAX_START_VALUE) + 1;
+        int step = RANDOM.nextInt(MAX_STEP) + 1;
+        int hiddenIndex = RANDOM.nextInt(progressionLength);
 
         String question = "";
+        int correctAnswer = 0;
         for (int i = 0; i < progressionLength; i++) {
             if (i == hiddenIndex) {
                 question += ".. ";
@@ -38,13 +32,19 @@ public final class Progression implements Game {
         return question.trim();
     }
 
-    @Override
-    public String getCorrectAnswer() {
-        return String.valueOf(correctAnswer);
+    public static String getCorrectAnswer(String question) {
+        int hiddenIndex = question.indexOf(".. ");
+        if (hiddenIndex == -1) {
+            return "Error: Missing hidden number";
+        }
+        String[] parts = question.split(" ");
+        int startValue = Integer.parseInt(parts[0]);
+        int step = Integer.parseInt(parts[2]) - Integer.parseInt(parts[1]);
+        return String.valueOf(startValue + step * (hiddenIndex / 2 + 1));
     }
 
-    @Override
-    public boolean isCorrectAnswer(String userAnswer) {
-        return userAnswer.equalsIgnoreCase(getCorrectAnswer());
+
+    public static boolean isCorrectAnswer(String userAnswer, String question) {
+        return userAnswer.equalsIgnoreCase(getCorrectAnswer(question));
     }
 }
