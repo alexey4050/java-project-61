@@ -33,16 +33,26 @@ public final class Progression {
     }
 
     public static String getCorrectAnswer(String question) {
-        int hiddenIndex = question.indexOf(".. ");
-        if (hiddenIndex == -1) {
-            return "Error: Missing hidden number";
-        }
         String[] parts = question.split(" ");
-        int startValue = Integer.parseInt(parts[0]);
-        int step = Integer.parseInt(parts[2]) - Integer.parseInt(parts[1]);
-        return String.valueOf(startValue + step * (hiddenIndex / 2 + 1));
-    }
+        int hiddenIndex = -1;
+        for (int i = 0; i < parts.length; i++) {
+            if (parts[i].equals("..")) {
+                hiddenIndex = i;
+            }
+        }
+        if (hiddenIndex == -1) {
+            return "Error: Missing hiddin number";
+        }
 
+        int step;
+        if (hiddenIndex > 1) {
+            step = Integer.parseInt(parts[hiddenIndex - 1]) - Integer.parseInt(parts[hiddenIndex - 2]);
+        } else {
+            step = Integer.parseInt(parts[hiddenIndex + 2]) - Integer.parseInt(parts[hiddenIndex + 1]);
+        }
+        int correctAnswer = Integer.parseInt(parts[hiddenIndex - 1]) + step;
+        return String.valueOf(correctAnswer);
+    }
 
     public static boolean isCorrectAnswer(String userAnswer, String question) {
         return userAnswer.equalsIgnoreCase(getCorrectAnswer(question));
