@@ -162,7 +162,7 @@ public class Engine {
     }
 
     private static String getUserAnswer() {
-        System.out.println("Your answer: ");
+        System.out.print("Your answer: ");
         return SCANNER.nextLine();
     }
 }

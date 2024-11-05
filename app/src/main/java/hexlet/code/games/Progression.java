@@ -41,15 +41,18 @@ public final class Progression {
             }
         }
         if (hiddenIndex == -1) {
-            return "Error: Missing hiddin number";
+            return "Error: Missing hidden number";
         }
 
         int step;
-        if (hiddenIndex > 1) {
-            step = Integer.parseInt(parts[hiddenIndex - 1]) - Integer.parseInt(parts[hiddenIndex - 2]);
+        if (hiddenIndex == 0) {
+            step = Integer.parseInt(parts[1]) - Integer.parseInt(parts[2]);
+        } else if (hiddenIndex == parts.length - 1) {
+            step = Integer.parseInt(parts[parts.length - 2]) - Integer.parseInt(parts[parts.length - 3]);
         } else {
-            step = Integer.parseInt(parts[hiddenIndex + 2]) - Integer.parseInt(parts[hiddenIndex + 1]);
+            step = Integer.parseInt(parts[hiddenIndex - 1]) - Integer.parseInt(parts[hiddenIndex - 2]);
         }
+
         int correctAnswer = Integer.parseInt(parts[hiddenIndex - 1]) + step;
         return String.valueOf(correctAnswer);
     }
