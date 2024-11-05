@@ -1,16 +1,17 @@
 package hexlet.code.games;
 
+import java.util.Random;
+
 public final class Calc {
     private static final int MAX_VALUE = 100;
     private static final int MIN_VALUE = -100;
+    private static final Random RANDOM = new Random();
 
     public static String getDescription() {
         return "What is the result of the expression?";
     }
 
     public static String generateQuestion(int numberOne, int numberTwo) {
-        numberOne = getRandomNumber(MIN_VALUE, MAX_VALUE);
-        numberTwo = getRandomNumber(MIN_VALUE, MAX_VALUE);
         String[] operations = {"+", "-", "*"};
         String operation = operations[getRandomNumber(0, operations.length - 1)];
         String currentQuestion = String.format("%d %s %d", numberOne, operation, numberTwo);
@@ -35,6 +36,6 @@ public final class Calc {
     }
 
     public static int getRandomNumber(int min, int max) {
-        return (int) (Math.random() * (min - max + 1) + min);
+        return (int) (RANDOM.nextDouble() * (max - min + 1) + min);
     }
 }
