@@ -24,7 +24,7 @@
 
 *Приветствие* - это простая игра, в которой игроку предлагают ввести свое имя. Это позволяет сделать игру более персонализированной.
 
-[![ asciicast](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx.svg)](https://asciinema.org/a/O41sMknRbYBpl8Np0Z5M2Sxjx)
+[![asciicast](https://asciinema.org/a/9N5aMgbOsZVZeXsVTFo3kuahP.svg)](https://asciinema.org/a/9N5aMgbOsZVZeXsVTFo3kuahP)
 ___ 
 
 ### ...evenGame (игра на чётность)
@@ -33,7 +33,7 @@ ___
 
 *Even Game* - это игра, в которой игроку показывают случайное число. Он должен определить, четное оно или нет, и дать ответ "yes" или "no". Правильные ответы засчитываются, неправильные - нет. Игрок должен дать 3 правильных ответа подряд, чтобы победить.
 
-[![asciicast](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu.svg)](https://asciinema.org/a/9Q396cajiYBxFRjTjyGIIFaQu)
+[![asciicast](https://asciinema.org/a/sSy2pZYYMWPhTdbKt5fj3Hyfb.svg)](https://asciinema.org/a/sSy2pZYYMWPhTdbKt5fj3Hyfb)
 
 ---
 
@@ -42,7 +42,7 @@ ___
 
 *Калькулятор* - это игра представляет собой простое математическое выражение и просит пользователя вычислить его результат.
 
-[![asciicast](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm.svg)](https://asciinema.org/a/hpmvmbV6zAWAKcLFFX147aykm)
+[![asciicast](https://asciinema.org/a/fTcFUsDpQF62rF50cIYMiO9AH.svg)](https://asciinema.org/a/fTcFUsDpQF62rF50cIYMiO9AH)
 
 ---
 
@@ -57,7 +57,7 @@ ___
 * Если Вы дадите правильный ответ, Вы продолжите игру.
 * Если же неправильный, Вы получите подсказку  правильным ответом и игра закончиться.
 
-[![asciicast](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto.svg)](https://asciinema.org/a/PvJGAjnLVxWuQvs8hLxgVQfto)
+[![asciicast](https://asciinema.org/a/ixMqFBhRFwaKli39Eo3VZhVm6.svg)](https://asciinema.org/a/ixMqFBhRFwaKli39Eo3VZhVm6)
 
 --- 
 ### ...arithmetic progression (игра арифметическая прогрессия)
@@ -72,7 +72,7 @@ ___
 * Если Вы дадите правильный ответ, вы продолжаете игру.
 * Если не правильный, Вы получаете подсказку с правильным ответом, и игра заканчивается.
 
-[![asciicast](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C.svg)](https://asciinema.org/a/NELEmyGKa0xWbAouylVunxi8C)
+[![asciicast](https://asciinema.org/a/GrrHUhKGa4JUbEUhSy39x8hse.svg)](https://asciinema.org/a/GrrHUhKGa4JUbEUhSy39x8hse)
 
 ---
 #### ...prime number game (игра простое число)
@@ -87,6 +87,6 @@ ___
 * Если Вы дадите правильный ответ, вы продолжаете игру.
 * Если не правильный, Вы получаете подсказку с правильным ответом, и игра заканчивается
 
-[![asciicast](https://asciinema.org/a/qmSeAmgHSGJdlPL0RwrmR17Fo.svg)](https://asciinema.org/a/qmSeAmgHSGJdlPL0RwrmR17Fo)
+[![asciicast](https://asciinema.org/a/3yHSeYVkIyb7raFnQpXtaaAgo.svg)](https://asciinema.org/a/3yHSeYVkIyb7raFnQpXtaaAgo)
 
 ---

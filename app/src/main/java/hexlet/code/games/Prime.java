@@ -1,18 +1,9 @@
 package hexlet.code.games;
 
-import java.util.Random;
-
 public final class Prime {
-    public static final Random RANDOM = new Random();
-    private static final int MAX_NUMBER = 100;
 
     public static String getDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    }
-
-    public static String generateQuestion() {
-        int number = RANDOM.nextInt(MAX_NUMBER);
-        return String.valueOf(number);
     }
 
     public static String getCorrectAnswer(int number) {
@@ -32,6 +23,7 @@ public final class Prime {
     }
 
     public static boolean isCorrectAnswer(String userAnswer, int number) {
-        return userAnswer.equalsIgnoreCase(getCorrectAnswer(number));
+        String correctAnswer = getCorrectAnswer(number);
+        return userAnswer.equals(correctAnswer);
     }
 }

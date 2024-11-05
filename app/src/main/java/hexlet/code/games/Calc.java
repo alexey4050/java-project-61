@@ -3,8 +3,6 @@ package hexlet.code.games;
 import java.util.Random;
 
 public final class Calc {
-    private static final int MAX_VALUE = 100;
-    private static final int MIN_VALUE = -100;
     private static final Random RANDOM = new Random();
 
     public static String getDescription() {
@@ -32,7 +30,8 @@ public final class Calc {
     }
 
     public static boolean isCorrectAnswer(String userAnswer, int numberOne, int numberTwo, String currentQuestion) {
-        return userAnswer.equalsIgnoreCase(getCorrectAnswer(numberOne, numberTwo, currentQuestion));
+        String correctAnswer = getCorrectAnswer(numberOne, numberTwo, currentQuestion);
+        return userAnswer.equals(correctAnswer);
     }
 
     public static int getRandomNumber(int min, int max) {

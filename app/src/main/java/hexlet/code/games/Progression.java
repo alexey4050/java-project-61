@@ -5,7 +5,7 @@ import java.util.Random;
 public final class Progression {
     private static final Random RANDOM = new Random();
     private static final int MIN_LENGTH = 5;
-    private static final int MAX_LENGTH = 6;
+    private static final int MAX_LENGTH = 10;
     private static final int MAX_START_VALUE = 100;
     private static final int MAX_STEP = 10;
 
@@ -14,50 +14,55 @@ public final class Progression {
     }
 
     public static String generateQuestion() {
-        int progressionLength = RANDOM.nextInt(MAX_LENGTH) + MIN_LENGTH;
+        int progressionLength = MIN_LENGTH + RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1);
         int startValue = RANDOM.nextInt(MAX_START_VALUE) + 1;
         int step = RANDOM.nextInt(MAX_STEP) + 1;
-        int hiddenIndex = RANDOM.nextInt(progressionLength);
 
-        String question = "";
-        int correctAnswer = 0;
+        String[] progression = new String[progressionLength];
+        int hiddenIndex = RANDOM.nextInt(progressionLength);
         for (int i = 0; i < progressionLength; i++) {
             if (i == hiddenIndex) {
-                question += ".. ";
-                correctAnswer = startValue + step * i;
+                progression[i] = "..";
             } else {
-                question += (startValue + step * i) + " ";
+                progression[i] = String.valueOf(startValue + i * step);
             }
         }
-        return question.trim();
+        return String.join(" ", progression);
     }
 
     public static String getCorrectAnswer(String question) {
         String[] parts = question.split(" ");
         int hiddenIndex = -1;
+
         for (int i = 0; i < parts.length; i++) {
             if (parts[i].equals("..")) {
                 hiddenIndex = i;
+                break;
             }
         }
+
         if (hiddenIndex == -1) {
             return "Error: Missing hidden number";
         }
 
-        int step;
-        if (hiddenIndex == 0) {
-            step = Integer.parseInt(parts[1]) - Integer.parseInt(parts[2]);
-        } else if (hiddenIndex == parts.length - 1) {
-            step = Integer.parseInt(parts[parts.length - 2]) - Integer.parseInt(parts[parts.length - 3]);
+        if (hiddenIndex > 1) {
+            int prevNumber = Integer.parseInt(parts[hiddenIndex - 1]);
+            int beforePrevNumber = Integer.parseInt(parts[hiddenIndex - 2]);
+            int step = prevNumber - beforePrevNumber;
+            return String.valueOf(prevNumber + step);
+        } else if (hiddenIndex < parts.length - 2) {
+            int nextNumber = Integer.parseInt(parts[hiddenIndex + 1]);
+            int afterNextNumber = Integer.parseInt(parts[hiddenIndex + 2]);
+            int step = afterNextNumber - nextNumber;
+            return String.valueOf(nextNumber - step);
         } else {
-            step = Integer.parseInt(parts[hiddenIndex - 1]) - Integer.parseInt(parts[hiddenIndex - 2]);
+            return "Error: Not enough data to calculate missing number";
         }
 
-        int correctAnswer = Integer.parseInt(parts[hiddenIndex - 1]) + step;
-        return String.valueOf(correctAnswer);
     }
 
     public static boolean isCorrectAnswer(String userAnswer, String question) {
-        return userAnswer.equalsIgnoreCase(getCorrectAnswer(question));
+        String correctAnswer = getCorrectAnswer(question);
+        return userAnswer.equals(correctAnswer);
     }
 }
