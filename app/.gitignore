@@ -11,6 +11,17 @@ app/progression.cast
 app/prime.cast
 app/demo.cast
 app/gcd.cast
+app/arpr.cast
+app/arpr1.cast
+app/even1.cast
+app/arpr2.cast
+app/cli.cast
+app/calcul1.cast
+app/gcd1.cast
+app/prime1.cast
+app/.idea
+
+
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
