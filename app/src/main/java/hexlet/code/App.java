@@ -23,35 +23,30 @@ public class App {
         int choice = Cli.SCANNER.nextInt();
         Cli.SCANNER.nextLine();
 
-        String gameName = "";
         switch (choice) {
             case GREET_GAME:
                 Cli.greet();
                 break;
             case EVEN_GAME:
-                gameName = "Even";
+                Engine.run("Even");
                 break;
             case CALC_GAME:
-                gameName = "Calc";
+                Engine.run("Calc");
                 break;
             case GCD_GAME:
-                gameName = "GCD";
+                Engine.run("GCD");
                 break;
             case PROGRESSION_GAME:
-                gameName = "Progression";
+                Engine.run("Progression");
                 break;
             case PRIME_GAME:
-                gameName = "Prime";
+                Engine.run("Prime");
                 break;
             case EXIT:
                 System.out.println("Goodbye!");
                 break;
             default:
                 System.out.println("Invalid choice. Please try again. " + choice);
-                return;
-        }
-        if (!gameName.isEmpty()) {
-            Engine.run(gameName);
         }
     }
 }

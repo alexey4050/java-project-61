@@ -1,9 +1,8 @@
 package hexlet.code.games;
 
-import java.util.Random;
+import hexlet.code.Utils;
 
 public final class Progression {
-    private static final Random RANDOM = new Random();
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
     private static final int MAX_START_VALUE = 100;
@@ -14,12 +13,12 @@ public final class Progression {
     }
 
     public static String generateQuestion() {
-        int progressionLength = MIN_LENGTH + RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1);
-        int startValue = RANDOM.nextInt(MAX_START_VALUE) + 1;
-        int step = RANDOM.nextInt(MAX_STEP) + 1;
+        int progressionLength = MIN_LENGTH + Utils.getRandomInt(0, MAX_LENGTH - MIN_LENGTH);
+        int startValue = Utils.getRandomInt(1, MAX_START_VALUE);
+        int step = Utils.getRandomInt(1, MAX_STEP);
 
         String[] progression = new String[progressionLength];
-        int hiddenIndex = RANDOM.nextInt(progressionLength);
+        int hiddenIndex = Utils.getRandomInt(0, progressionLength - 1);
         for (int i = 0; i < progressionLength; i++) {
             if (i == hiddenIndex) {
                 progression[i] = "..";

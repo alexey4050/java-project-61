@@ -5,13 +5,12 @@ import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
-import java.util.Random;
+
 import java.util.Scanner;
 
 public class Engine {
 
     private static final int ROUNDS_COUNTS = 3;
-    private static final Random RANDOM = new Random();
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final int MAX_VALUE = 100;
 
@@ -46,7 +45,7 @@ public class Engine {
         System.out.println(Even.getDescription());
         int rounds = 0;
         while (rounds < ROUNDS_COUNTS) {
-            int number = RANDOM.nextInt(MAX_VALUE);
+            int number = Utils.getRandomInt(0, MAX_VALUE);
             System.out.println("Question: " + number);
             String userAnswer = getUserAnswer();
 
@@ -69,8 +68,8 @@ public class Engine {
         System.out.println(Calc.getDescription());
         int rounds = 0;
         while (rounds < ROUNDS_COUNTS) {
-            int numberOne = RANDOM.nextInt(MAX_VALUE);
-            int numberTwo = RANDOM.nextInt(MAX_VALUE);
+            int numberOne = Utils.getRandomInt(0, MAX_VALUE);
+            int numberTwo = Utils.getRandomInt(0, MAX_VALUE);
             String currentQuestion = Calc.generateQuestion(numberOne, numberTwo);
             System.out.println("Question: " + currentQuestion);
             String userAnswer = getUserAnswer();
@@ -81,7 +80,8 @@ public class Engine {
             } else {
                 System.out.print("'" + userAnswer + "' is wrong " + "answer ;(. ");
                 System.out.print("Correct answer was '");
-                System.out.println(Calc.getCorrectAnswer(numberOne, numberTwo, currentQuestion) + "'. ");
+                char operation = currentQuestion.trim().split(" ")[1].charAt(0);
+                System.out.println(Calc.getCorrectAnswer(numberOne, numberTwo, operation) + "'. ");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
@@ -95,8 +95,8 @@ public class Engine {
         System.out.println(GCD.getDescription());
         int rounds = 0;
         while (rounds < ROUNDS_COUNTS) {
-            int numberOne = RANDOM.nextInt(MAX_VALUE);
-            int numberTwo = RANDOM.nextInt(MAX_VALUE);
+            int numberOne = Utils.getRandomInt(0, MAX_VALUE);
+            int numberTwo = Utils.getRandomInt(0, MAX_VALUE);
             System.out.println("Question: " + numberOne + " " + numberTwo);
             String userAnswer = getUserAnswer();
 
@@ -142,7 +142,7 @@ public class Engine {
         System.out.println(Prime.getDescription());
         int rounds = 0;
         while (rounds < ROUNDS_COUNTS) {
-            int number = RANDOM.nextInt(MAX_VALUE);
+            int number = Utils.getRandomInt(0, MAX_VALUE);
             System.out.println("Question: " + number);
             String userAnswer = getUserAnswer();
 

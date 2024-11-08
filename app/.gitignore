@@ -6,7 +6,6 @@ build/
 .idea
 app/evengame.cast
 app/calculator.cast
-app/evengame.cast
 app/progression.cast
 app/prime.cast
 app/demo.cast
@@ -20,6 +19,8 @@ app/calcul1.cast
 app/gcd1.cast
 app/prime1.cast
 app/.idea
+
+
 
 
 

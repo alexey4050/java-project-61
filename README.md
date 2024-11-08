@@ -1,10 +1,10 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/alexey4050/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alexey4050/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/124cb8728be82e06f63d/maintainability)](https://codeclimate.com/github/alexey4050/java-project-61/maintainability)
-
+[![My Skills](https://skillicons.dev/icons?i=java,github,idea,gradle)](https://skillicons.dev)
 ---
 ## Mind games. 
-#### Как играть
+#### Как играть 
 1. Запустите игру.
 2. Выберите игру, которая соответствует номеру.
 3. Введите свое имя.
@@ -51,7 +51,7 @@ ___
 
 *НОД* - это игра где нужно найти наибольший общий делитель (НОД) двух случайных чисел, которые ему предоставляются.
 
- #### Правилв игры.
+ #### Правила игры.
 * В игре Вам будут показаны два случайных числа.
 * Вам необходимо ввести наибольший общий делитель этих чисел.
 * Если Вы дадите правильный ответ, Вы продолжите игру.
