@@ -1,18 +1,28 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 public final class GCD {
 
-    public static String getDescription() {
-        return "Find the greatest common divisor of given numbers.";
+    static final String RULES = "Find the greatest common divisor of given numbers.";
+
+    public static void run() {
+        var rounds = new String[Engine.ROUNDS_COUNTS][2];
+
+        for (int i = 0; i < rounds.length; i++) {
+            rounds[i] = generateRound();
+        }
+        Engine.run(RULES, rounds);
     }
 
-    public static String getCorrectAnswer(int numberOne, int numberTwo) {
-        return String.valueOf(gcd(numberOne, numberTwo));
-    }
+    private static String[] generateRound() {
+        int numberOne = Utils.generateRandomNumber();
+        int numberTwo = Utils.generateRandomNumber();
+        String correctAnswer = "" + gcd(numberOne, numberTwo);
+        String question = numberOne + " " + numberTwo;
 
-    public static boolean isCorrectAnswer(String userAnswer, int numberOne, int numberTwo) {
-        String correctAnswer = getCorrectAnswer(numberOne, numberTwo);
-        return userAnswer.equals(correctAnswer);
+        return new String[]{question, correctAnswer};
     }
 
     public static int gcd(int numOne, int numTwo) {
