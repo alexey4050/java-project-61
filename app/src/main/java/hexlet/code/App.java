@@ -1,5 +1,13 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
+import java.util.Scanner;
+
 public class App {
     private static final int GREET_GAME = 1;
     private static final int EVEN_GAME = 2;
@@ -10,6 +18,7 @@ public class App {
     private static final int EXIT = 0;
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -20,27 +29,26 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-        int choice = Cli.SCANNER.nextInt();
-        Cli.SCANNER.nextLine();
+        int choice = scanner.nextInt();
 
         switch (choice) {
             case GREET_GAME:
-                Cli.greet();
+                Engine.greetMessage(scanner);
                 break;
             case EVEN_GAME:
-                Engine.run("Even");
+                Even.run();
                 break;
             case CALC_GAME:
-                Engine.run("Calc");
+                Calc.run();
                 break;
             case GCD_GAME:
-                Engine.run("GCD");
+                GCD.run();
                 break;
             case PROGRESSION_GAME:
-                Engine.run("Progression");
+                Progression.run();
                 break;
             case PRIME_GAME:
-                Engine.run("Prime");
+                Prime.run();
                 break;
             case EXIT:
                 System.out.println("Goodbye!");
